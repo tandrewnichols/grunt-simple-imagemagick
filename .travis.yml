@@ -1,12 +1,15 @@
 language: node_js
 sudo: false
-before_install:
-  - "export CODECLIMATE_REPO_TOKEN=1160f50f3719d0e666e414a4af387bf1a9f4229a8c7afe21b15c24c5b6458fa7"
+addons:
+  code_climate:
+    repo_token: 1160f50f3719d0e666e414a4af387bf1a9f4229a8c7afe21b15c24c5b6458fa7
 install:
   - "npm install grunt-cli codeclimate-test-reporter -g"
   - "npm install"
 script:
   - "grunt ci"
+after_script:
+  - "codeclimate-test-reporter < coverage/lcov.info"
 node_js:
   - "4"
   - "5"
