@@ -50,9 +50,12 @@ module.exports = function(grunt) {
       unit: {
         options: {
           root: 'tasks',
-          dir: 'coverage'
-        },
-        cmd: 'cover grunt unit'
+          dir: 'coverage',
+          simple: {
+            cmd: 'cover',
+            args: ['grunt', 'mocha']
+          }
+        }
       }
     },
     open: {
