@@ -50,7 +50,6 @@ grunt.initConfig({
 
 // or
 
-
 grunt.initConfig({
   imagemagick: {
     convert: {
