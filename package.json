@@ -39,7 +39,7 @@
     }
   },
   "dependencies": {
-    "simple-cli": "^3.0.2"
+    "simple-cli": "^4.0.0"
   },
   "devDependencies": {
     "coffee-script": "^1.11.1",
