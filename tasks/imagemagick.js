@@ -1,3 +1,3 @@
  var cli = require('simple-cli');
 
-module.exports = cli('imagemagick');
+module.exports = cli({ task: 'imagemagick', singleDash: true });

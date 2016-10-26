@@ -6,4 +6,7 @@ describe 'imagemagick', ->
   Given -> @subject = proxyquire '../tasks/imagemagick',
     'simple-cli': @cli
 
-  Then -> @cli.calledWith('imagemagick').should.be.true
+  Then -> @cli.calledWith(
+    task: 'imagemagick'
+    singleDash: true
+  ).should.be.true
