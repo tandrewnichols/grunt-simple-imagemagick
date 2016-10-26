@@ -30,9 +30,11 @@ The `imagemagick` task is a multiTask, where the target is the image magick comm
 
 ```
 grunt.initConfig({
-  mogrify: {
-    resize: '100x100',
-    rawArgs: 'app/img/*.png'
+  imagemagick: {
+    mogrify: {
+      resize: '100x100',
+      rawArgs: 'app/img/*.png'
+    }
   }
 });
 ```
@@ -41,15 +43,19 @@ Unlike most simple-cli wrapped grunt tasks, image magick is _really_ complicated
 
 ```
 grunt.initConfig({
-  convert: ['-size', '320x85', 'canvas:none', '-font', 'Bookman-DemiItalic', '-pointsize', '72', '-draw', "text 25,60 'Magick'", '-channel', 'RGBA', '-blur', '0x6', '-fill', 'darkred', '-stroke', 'magenta', '-draw', "text 20,55 'Magick'", 'fuzzy-magick.png']
+  imagemagick: {
+    convert: ['-size', '320x85', 'canvas:none', '-font', 'Bookman-DemiItalic', '-pointsize', '72', '-draw', "text 25,60 'Magick'", '-channel', 'RGBA', '-blur', '0x6', '-fill', 'darkred', '-stroke', 'magenta', '-draw', "text 20,55 'Magick'", 'fuzzy-magick.png']
+  }
 });
 
 // or
 
 
 grunt.initConfig({
-  convert: {
-    args: ['-size', '320x85', 'canvas:none', '-font', 'Bookman-DemiItalic', '-pointsize', '72', '-draw', "text 25,60 'Magick'", '-channel', 'RGBA', '-blur', '0x6', '-fill', 'darkred', '-stroke', 'magenta', '-draw', "text 20,55 'Magick'", 'fuzzy-magick.png']
+  imagemagick: {
+    convert: {
+      args: ['-size', '320x85', 'canvas:none', '-font', 'Bookman-DemiItalic', '-pointsize', '72', '-draw', "text 25,60 'Magick'", '-channel', 'RGBA', '-blur', '0x6', '-fill', 'darkred', '-stroke', 'magenta', '-draw', "text 20,55 'Magick'", 'fuzzy-magick.png']
+    }
   }
 });
 ```
